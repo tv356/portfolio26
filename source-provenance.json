@@ -1,0 +1,49 @@
+{
+  "source": "https://cherylvo.com",
+  "checked": "2026-10-17",
+  "pages": [
+    {
+      "slug": "vanguardai",
+      "source": "https://cherylvo.com/vanguardai",
+      "newParagraphs": 0,
+      "newImages": 0
+    },
+    {
+      "slug": "atlas",
+      "source": "https://cherylvo.com/atlas",
+      "newParagraphs": 0,
+      "newImages": 0
+    },
+    {
+      "slug": "disney",
+      "source": "https://cherylvo.com/disney",
+      "newParagraphs": 0,
+      "newImages": 0
+    },
+    {
+      "slug": "urban-outfiters",
+      "source": "https://cherylvo.com/urban-outfiters",
+      "newParagraphs": 0,
+      "newImages": 0
+    },
+    {
+      "slug": "impactvesting",
+      "source": "https://cherylvo.com/impactvesting",
+      "newParagraphs": 0,
+      "newImages": 0
+    },
+    {
+      "slug": "whatif",
+      "source": "https://cherylvo.com/whatif",
+      "newParagraphs": 1,
+      "newImages": 2
+    },
+    {
+      "slug": "play",
+      "source": "https://cherylvo.com/play",
+      "newParagraphs": 3,
+      "newImages": 5
+    }
+  ],
+  "note": "Original narrative and media retained; responsive duplicates omitted. Microsoft links to public Windows 365, without inventing a private case study."
+}

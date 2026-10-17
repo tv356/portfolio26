@@ -25,3 +25,7 @@ No build step or package installation is required. Serve over HTTP rather than o
 - `media/`, `brands/`, `vendor/`: images, videos, company logos, and bundled Three.js
 
 This repository stores the site source. Pushing changes does not automatically publish a live website.
+
+## Case studies
+
+Project pages share the hotpot ingredient menu, dark theme, chapter navigation, reading progress, and accessible image expansion. Original content was checked against cherylvo.com on October 17, 2026; see `source-provenance.json`. Microsoft has a source-backed public product overview rather than an invented private case study.
