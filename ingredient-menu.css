@@ -9,3 +9,5 @@
 .sidebar .profile{text-align:left!important}.sidebar .profile .socials{justify-content:flex-start!important}
 
 .sidebar .folder-nav{border-radius:12px!important}.sidebar .folder-nav:before,.sidebar .folder-nav:after{border-radius:11px!important}@media(max-width:700px){.sidebar .folder-nav{border-radius:10px!important}}
+
+.sidebar .menu-food{object-fit:contain;stroke:none;filter:none}.sidebar .food-4{fill:none}
