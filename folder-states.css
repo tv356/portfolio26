@@ -1,0 +1,15 @@
+.sidebar .folder-nav{background:#292b2e!important}.sidebar .folder-nav:after{opacity:0}.sidebar .folder-nav:is(:hover,:focus-visible,.active):after{opacity:.13}
+
+.sidebar .folder-nav{--nav-light:#638cb8;--nav-warm:#9b86ad;background:#292b2e!important}
+.sidebar .folder-nav[href="#project-vanguardai"]{--nav-light:#a74348;--nav-warm:#b49a7b}
+.sidebar .folder-nav[href="#project-disney"]{--nav-light:#7771b5;--nav-warm:#a2b4ca}
+.sidebar .folder-nav[href="#project-urban-outfiters"]{--nav-light:#9c894c;--nav-warm:#788c70}
+.sidebar .folder-nav[href="#project-atlas"]{--nav-light:#348f88;--nav-warm:#6c9fb7}
+.sidebar .folder-nav[href="#moments"]{--nav-light:#a28eb4;--nav-warm:#bc9e90}
+.sidebar .folder-nav[href="#experiments"]{--nav-light:#687cc3;--nav-warm:#95b1c9}
+.sidebar .folder-nav[href="#art"]{--nav-light:#b58071;--nav-warm:#bba168}
+.sidebar .folder-nav:before{display:block;opacity:0;background:radial-gradient(ellipse at 95% 95%,var(--nav-light),transparent 75%),radial-gradient(ellipse at 70% 0%,var(--nav-warm),transparent 75%);transition:opacity .35s;pointer-events:none}
+.sidebar .folder-nav:is(:hover,:focus-visible,.active){background:#292b2e!important}
+.sidebar .folder-nav:is(:hover,:focus-visible,.active):before{opacity:.6}
+.sidebar .folder-nav .folder-tab{background:#34373b!important;transition:background .35s}
+.sidebar .folder-nav:is(:hover,:focus-visible,.active) .folder-tab{background:linear-gradient(110deg,color-mix(in srgb,var(--nav-light) 55%,#34373b),#34373b)!important}

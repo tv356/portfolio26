@@ -1,0 +1,6 @@
+(()=>{
+ const all=[...document.querySelectorAll('.folder-nav')],personal=all.filter(a=>a.classList.contains('personal-folder')),sections=[...document.querySelectorAll('.project-panel,#moments,#experiments,#art')];let queued=false;personal.forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.hash);if(!target)return;e.preventDefault();window.scrollTo({top:target.getBoundingClientRect().top+scrollY-30,behavior:'instant'});schedule();}));
+ function sync(){queued=false;const journey=document.querySelector('.gallery-journey');if(journey){const r=journey.getBoundingClientRect();if(r.top<innerHeight*.5&&r.bottom>innerHeight*.6){personal.forEach(a=>{a.classList.remove('active');a.removeAttribute('aria-current')});return}}
+ let current=null;for(const section of sections){if(section.getBoundingClientRect().top<innerHeight*.45)current=section.id}if(!current)return;all.forEach(a=>{const active=a.hash==='#'+current;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});}
+ function schedule(){if(!queued){queued=true;requestAnimationFrame(sync)}}addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});sync();
+})();

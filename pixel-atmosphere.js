@@ -1,0 +1,9 @@
+(()=>{
+ const sky=document.querySelector('.dashboard-sky'),particles=sky?.querySelector('.ambient-particles');if(particles)particles.remove();
+ const layer=document.createElement('canvas');layer.className='pixel-atmosphere';layer.setAttribute('aria-hidden','true');Object.assign(layer.style,{position:'absolute',inset:'0',width:'100%',height:'100%',pointerEvents:'none'});sky?.append(layer);const ctx=layer.getContext('2d'),reduce=matchMedia('(prefers-reduced-motion:reduce)');let w=1,h=1,t=0,last=0,frame=0;
+ function resize(){const r=layer.getBoundingClientRect();w=r.width;h=r.height;layer.width=w;layer.height=h;draw()}
+ function draw(){ctx.clearRect(0,0,w,h);const step=18;for(let y=0;y<h;y+=step)for(let x=0;x<w;x+=step){const field=Math.sin(x*.009+t*.11)+Math.cos(y*.011-t*.07)+Math.sin((x+y)*.006);if(field<.35)continue;const pulse=(Math.sin(x*13+y*7+t*.45)+1)*.5;ctx.fillStyle=pulse>.97?'rgba(238,153,110,.45)':`rgba(158,181,218,${.018+Math.max(0,field)*.012})`;ctx.fillRect(x,y,4,4);if(pulse>.994&&field>1.4){ctx.font='8px monospace';ctx.fillStyle='rgba(190,208,233,.2)';ctx.fillText(['+','0','·','×'][Math.floor(x/step+y/step)%4],x+8,y+5)}}}
+ function tick(ms){frame=0;if(document.hidden||reduce.matches||document.body.classList.contains('still'))return;const dt=last?ms-last:16;last=ms;t+=Math.min(dt,50)/1000;if(ms%80<20)draw();frame=requestAnimationFrame(tick)}
+ function sync(){cancelAnimationFrame(frame);last=0;draw();if(!document.hidden&&!reduce.matches&&!document.body.classList.contains('still'))frame=requestAnimationFrame(tick)}
+ new ResizeObserver(resize).observe(layer);new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['class']});reduce.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);resize();sync();
+})();

@@ -1,0 +1,5 @@
+(()=>{
+const panels=[...document.querySelectorAll('.project-panel')],reduce=matchMedia('(prefers-reduced-motion:reduce)');let queued=false;
+function paint(){queued=false;const still=reduce.matches||document.body.classList.contains('still'),h=innerHeight;for(const panel of panels){const r=panel.getBoundingClientRect();if(r.bottom< -100||r.top>h+150)continue;const entering=Math.max(0,Math.min(1,(r.top-h*.25)/(h*.75)));panel.style.setProperty('--scroll-y',`${still?0:entering*44}px`);panel.style.setProperty('--scroll-scale',String(still?1:1-entering*.035));panel.style.setProperty('--scroll-opacity',String(still?1:1-entering*.22));const depth=still?0:Math.max(-12,Math.min(12,(r.top+r.height/2-h/2)*.025));for(const media of panel.querySelectorAll('.visual-media>img,.visual-media>video'))media.style.translate=`0 ${depth.toFixed(2)}px`;}}
+function schedule(){if(!queued){queued=true;requestAnimationFrame(paint)}}addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});reduce.addEventListener('change',schedule);new MutationObserver(schedule).observe(document.body,{attributes:true,attributeFilter:['class']});paint();
+})();

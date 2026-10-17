@@ -1,0 +1,13 @@
+Asset provenance
+
+The four personal photographs were retrieved from Cheryl’s existing About page, with its pageAssets export. Captions in this draft are proposed editorial copy.
+
+Built-in image generation was used for sky.png and bird.png, as temporary design assets.
+
+Sky prompt:
+Use case: photorealistic-natural. Asset type: full-width background photograph for a personal portfolio draft. Photograph of an ordinary beautiful blue sky seen looking upward while traveling, soft irregular white cloud wisps with a subtle peach light low on the right. Clear medium blue upper area, quiet pale blue lower area, lots of sky and space. Natural analog travel photograph, slight 35mm film grain, unpretentious and nostalgic, calm sense of freedom. Landscape wide 3:2 composition. No land, no airplane, no bird, no text, no illustration, no interface, no heavenly fantasy, no dramatic sunbeams.
+
+Bird prompt:
+Use case: illustration-story. Asset type: small transparent bird signature for a personal portfolio. A single tiny swift bird in flight, drawn with a few thin dark navy pen strokes, hand-drawn in a travel notebook, graceful long curved swept-back wings and a small forked tail, subtly imperfect ink lines. Monochrome navy, airy minimalist silhouette with abundant transparent space, no frame, no background, no text, no extra objects. Actual transparent background.
+
+This is a standalone local design draft. It does not contain the case-study source, which could not be retrieved because execution approval rejected source transfer. Work links lead to the existing portfolio. No live changes have been published.

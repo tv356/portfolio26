@@ -1,0 +1,4 @@
+Original generated illustration: night-garden-v1.png
+Generated with image-generation tool, 2026-10-16.
+Brief: monochrome stippled nocturnal botanical garden; asymmetric Vietnamese-inspired moon gate at edges, bamboo and wild grasses, crescent moon, distant swifts, deep empty central sky for interactive project frames. No lettering, people, or logos.
+Runtime layers: original Three.js project frames, orbital paths, animated birds, particles, camera transitions, and pointer interaction.
